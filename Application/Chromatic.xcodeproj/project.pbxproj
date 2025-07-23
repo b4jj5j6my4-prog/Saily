@@ -336,6 +336,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03B05C042E311B57004AF1DB /* AptPackageVersion */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AptPackageVersion; path = ../Foundation/AptPackageVersion; sourceTree = SOURCE_ROOT; };
+		03B05C052E311B57004AF1DB /* AptRepository */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AptRepository; path = ../Foundation/AptRepository; sourceTree = SOURCE_ROOT; };
+		03B05C062E311B57004AF1DB /* AuxiliaryExecute */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AuxiliaryExecute; path = ../Foundation/AuxiliaryExecute; sourceTree = SOURCE_ROOT; };
+		03B05C072E311B57004AF1DB /* BitByteData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BitByteData; path = ../Foundation/BitByteData; sourceTree = SOURCE_ROOT; };
+		03B05C082E311B57004AF1DB /* Bugsnag */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Bugsnag; path = ../Foundation/Bugsnag; sourceTree = SOURCE_ROOT; };
+		03B05C092E311B57004AF1DB /* Cosmos */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Cosmos; path = ../Foundation/Cosmos; sourceTree = SOURCE_ROOT; };
+		03B05C0A2E311B57004AF1DB /* Digger */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Digger; path = ../Foundation/Digger; sourceTree = SOURCE_ROOT; };
+		03B05C0B2E311B57004AF1DB /* Dog */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Dog; path = ../Foundation/Dog; sourceTree = SOURCE_ROOT; };
+		03B05C0C2E311B57004AF1DB /* Down */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Down; path = ../Foundation/Down; sourceTree = SOURCE_ROOT; };
+		03B05C0D2E311B57004AF1DB /* DropDown */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DropDown; path = ../Foundation/DropDown; sourceTree = SOURCE_ROOT; };
+		03B05C0E2E311B57004AF1DB /* DTPhotoViewerController */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DTPhotoViewerController; path = ../Foundation/DTPhotoViewerController; sourceTree = SOURCE_ROOT; };
+		03B05C0F2E311B57004AF1DB /* FLAnimatedImage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FLAnimatedImage; path = ../Foundation/FLAnimatedImage; sourceTree = SOURCE_ROOT; };
+		03B05C102E311B57004AF1DB /* FluentIcon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FluentIcon; path = ../Foundation/FluentIcon; sourceTree = SOURCE_ROOT; };
+		03B05C112E311B57004AF1DB /* JsonDepiction */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = JsonDepiction; path = ../Foundation/JsonDepiction; sourceTree = SOURCE_ROOT; };
+		03B05C122E311B57004AF1DB /* LNPopupController */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LNPopupController; path = ../Foundation/LNPopupController; sourceTree = SOURCE_ROOT; };
+		03B05C132E311B57004AF1DB /* LTMorphingLabel */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LTMorphingLabel; path = ../Foundation/LTMorphingLabel; sourceTree = SOURCE_ROOT; };
+		03B05C142E311B57004AF1DB /* PathListTableViewController */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PathListTableViewController; path = ../Foundation/PathListTableViewController; sourceTree = SOURCE_ROOT; };
+		03B05C152E311B57004AF1DB /* PropertyWrapper */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PropertyWrapper; path = ../Foundation/PropertyWrapper; sourceTree = SOURCE_ROOT; };
+		03B05C162E311B57004AF1DB /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SDWebImage; path = ../Foundation/SDWebImage; sourceTree = SOURCE_ROOT; };
+		03B05C172E311B57004AF1DB /* SnapKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SnapKit; path = ../Foundation/SnapKit; sourceTree = SOURCE_ROOT; };
+		03B05C182E311B57004AF1DB /* SPIndicator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SPIndicator; path = ../Foundation/SPIndicator; sourceTree = SOURCE_ROOT; };
+		03B05C192E311B57004AF1DB /* SWCompression */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SWCompression; path = ../Foundation/SWCompression; sourceTree = SOURCE_ROOT; };
+		03B05C1A2E311B57004AF1DB /* SwifterSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwifterSwift; path = ../Foundation/SwifterSwift; sourceTree = SOURCE_ROOT; };
+		03B05C1B2E311B57004AF1DB /* SwiftMD5 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftMD5; path = ../Foundation/SwiftMD5; sourceTree = SOURCE_ROOT; };
+		03B05C1C2E311B57004AF1DB /* SwiftThrottle */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftThrottle; path = ../Foundation/SwiftThrottle; sourceTree = SOURCE_ROOT; };
+		03B05C1D2E311B57004AF1DB /* Tuner */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Tuner; path = ../Foundation/Tuner; sourceTree = SOURCE_ROOT; };
 		5000347F2469765800890951 /* Sections.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sections.xcassets; sourceTree = "<group>"; };
 		500A2E5926D12C0100A1DA03 /* AptScanner+Remove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AptScanner+Remove.swift"; sourceTree = "<group>"; };
 		500C977426DA475800B66AB3 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -665,6 +691,32 @@
 		5034021726BFFF6B00E8D02B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03B05C042E311B57004AF1DB /* AptPackageVersion */,
+				03B05C052E311B57004AF1DB /* AptRepository */,
+				03B05C062E311B57004AF1DB /* AuxiliaryExecute */,
+				03B05C072E311B57004AF1DB /* BitByteData */,
+				03B05C082E311B57004AF1DB /* Bugsnag */,
+				03B05C092E311B57004AF1DB /* Cosmos */,
+				03B05C0A2E311B57004AF1DB /* Digger */,
+				03B05C0B2E311B57004AF1DB /* Dog */,
+				03B05C0C2E311B57004AF1DB /* Down */,
+				03B05C0D2E311B57004AF1DB /* DropDown */,
+				03B05C0E2E311B57004AF1DB /* DTPhotoViewerController */,
+				03B05C0F2E311B57004AF1DB /* FLAnimatedImage */,
+				03B05C102E311B57004AF1DB /* FluentIcon */,
+				03B05C112E311B57004AF1DB /* JsonDepiction */,
+				03B05C122E311B57004AF1DB /* LNPopupController */,
+				03B05C132E311B57004AF1DB /* LTMorphingLabel */,
+				03B05C142E311B57004AF1DB /* PathListTableViewController */,
+				03B05C152E311B57004AF1DB /* PropertyWrapper */,
+				03B05C162E311B57004AF1DB /* SDWebImage */,
+				03B05C172E311B57004AF1DB /* SnapKit */,
+				03B05C182E311B57004AF1DB /* SPIndicator */,
+				03B05C192E311B57004AF1DB /* SWCompression */,
+				03B05C1A2E311B57004AF1DB /* SwifterSwift */,
+				03B05C1B2E311B57004AF1DB /* SwiftMD5 */,
+				03B05C1C2E311B57004AF1DB /* SwiftThrottle */,
+				03B05C1D2E311B57004AF1DB /* Tuner */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1692,6 +1744,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_ENTITLEMENTS = Chromatic/Chromatic.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -1730,6 +1783,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_ENTITLEMENTS = Chromatic/Chromatic.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
