@@ -300,7 +300,7 @@ class PaymentManager {
         payload["udid"] = DeviceInfo.current.udid // otherwise it will return remote failed
         payload["device"] = DeviceInfo.current.machine
         payload["payment_secret"] = userInfo.secert
-        payload["architecture"] = "iphoneos-arm64"
+        payload["architecture"] = "iphoneos-arm64e"
         let payloadJson = (try? JSONSerialization.data(withJSONObject: payload, options: .fragmentsAllowed)) ?? Data()
         request.httpBody = payloadJson
 
@@ -370,7 +370,7 @@ class PaymentManager {
         payload["version"] = package.latestVersion
         payload["repo"] = package.repoRef?.absoluteString ?? ""
         payload["payment_secret"] = userInfo.secert
-        payload["architecture"] = "iphoneos-arm64"
+        payload["architecture"] = "iphoneos-arm64e"
         let payloadJson = (try? JSONSerialization.data(withJSONObject: payload, options: .fragmentsAllowed)) ?? Data()
         request.httpBody = payloadJson
 

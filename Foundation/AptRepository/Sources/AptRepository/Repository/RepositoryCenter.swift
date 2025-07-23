@@ -18,7 +18,7 @@ public final class RepositoryCenter {
     public static let `default` = RepositoryCenter()
 
     /// used to generate download url for packages
-    public static let deviceArchitecture = "iphoneos-arm64"
+    public static let deviceArchitecture = "iphoneos-arm64e"
 
     /// persist engine will work inside this
     public let workingLocation: URL

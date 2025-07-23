@@ -34,7 +34,7 @@ func invokePackages(withContext original: String, fromRepo: URL? = nil) -> [Stri
                 debugPrint(metadata)
                 return
             }
-            guard let architecture = metadata["architecture"], architecture != "iphoneos-arm", architecture != "iphoneos-arm64e" else { return }
+            guard let architecture = metadata["architecture"], architecture != "iphoneos-arm" else { return }
             if let package = resultBuilder[id] {
                 var newpayload = package.payload
                 newpayload[ver] = metadata
