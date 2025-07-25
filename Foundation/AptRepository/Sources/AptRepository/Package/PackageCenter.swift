@@ -165,11 +165,15 @@ public final class PackageCenter {
             .appendingPathComponent(storeDirPrefix)
             .appendingPathComponent("RepositoryCenter")
 
-        // MARK: - ROOTLESS CHECKER
+        // MARK: - ROOTHIDE CHECKER
 
-        if FileManager.default.fileExists(atPath: "/var/jb/Library/dpkg/status") {
-            systemPackageStatusLocation = "/var/jb/Library/dpkg/status"
-            Dog.shared.join("RepositoryCenter", "detected rootless environment")
+        let jbrootPath = Bundle.main.bundlePath.components(separatedBy: "/Applications/")[0].trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        let isRoothide = true
+        
+        if isRoothide && !jbrootPath.isEmpty {
+            let statusPath = "/\(jbrootPath)/Library/dpkg/status"
+            systemPackageStatusLocation = statusPath
+            Dog.shared.join("RepositoryCenter", "detected roothide environment, prefix: \(jbrootPath)")
         }
 
         Dog.shared.join("RepositoryCenter", "tracing package status with \(systemPackageStatusLocation)", level: .info)

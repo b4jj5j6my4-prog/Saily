@@ -103,6 +103,12 @@
 /* Confirm */
 "CONFIRM" = "Conferma";
 
+/* Please contact @roothideDev to update it */
+"CONTACT_ROOTHIDE_DEV" = "Per favore contatta @roothideDev per aggiornarlo";
+
+/* Convert */
+"CONVERT_BUTTON" = "Converti";
+
 /* Copied */
 "COPIED" = "Copiato";
 
@@ -166,6 +172,9 @@
 /* Your download can be resumed any time. */
 "DOWNLOAD_CAN_RESUME_ANY_TIME" = "Il download può essere ripreso in qualsiasi momento.";
 
+/* Download Failed */
+"DOWNLOAD_FAILED" = "Download fallito";
+
 /* Downloaded file can be found in setting. */
 "DOWNLOADED_FILE_CAN_BE_FOUND_IN_SETTING" = "Il file scaricato si trova nelle impostazioni.";
 
@@ -208,6 +217,12 @@
 /* Failed to create operation payload, incomplete download or broken resources. Please try again later. */
 "FAILED_TO_CREATE_PAYLOAD_MAYBE_DOWNLOAD_FAILED" = "Impossibile creare il payload dell'operazione a causa di un download incompleto o risorse danneggiate. Si prega di riprovare più tardi.";
 
+/* Failed to get file */
+"FAILED_TO_GET_FILE" = "Impossibile ottenere il file";
+
+/* Failed to open Patcher */
+"FAILED_TO_OPEN_PATCHER" = "Impossibile aprire Patcher";
+
 /* Failed to verify package */
 "FAILED_VERIFY_PACKAGE" = "Errore nella verifica del pacchetto";
 
@@ -222,6 +237,9 @@
 
 /* Found author with this search key. */
 "FOUND_AUTHOR_WITH_NAME" = "Trovato un autore con questa chiave di ricerca.";
+
+/* Get Patcher */
+"GET_PATCHER" = "Ottieni Patcher";
 
 /* History Records */
 "HISTORY_RECORDS" = "Registro Cronologia";
@@ -252,6 +270,9 @@
 
 /* No comment provided by engineer. */
 "Invalid URL" = "URL non valido";
+
+/* Invalid package path */
+"INVALID_PACKAGE_PATH" = "Percorso del pacchetto non valido";
 
 /* Last Modification */
 "LAST_MODIFICATION" = "Ultima modifica";
@@ -313,6 +334,9 @@
 /* Not Modified */
 "NOT_MODIFIED" = "Non modificato";
 
+/* OK */
+"OK" = "OK";
+
 /* Native Only */
 "ONLY_NATIVE" = "Native Only";
 
@@ -343,6 +367,12 @@
 /* Package Detail */
 "PACKAGE_DETAIL" = "Dettagli Pacchetto";
 
+/* Not Updated */
+"PACKAGE_NOT_UPDATED" = "Non aggiornato";
+
+/* %@(%@)\n\nYou can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher. */
+"PACKAGE_UPDATE_REQUIRED_FORMAT" = "%@(%@)\n\nPuoi contattare lo sviluppatore di questo pacchetto per aggiornarlo per roothide, oppure puoi provare a convertirlo tramite roothide Patcher.";
+
 /* Packages */
 "PACKAGES" = "Pacchetti";
 
@@ -351,6 +381,9 @@
 
 /* We found these links in the clipboard, they may be the source of the software */
 "PASTEBOARD_REPO_DESCRIPTION" = "Abbiamo trovato questi link negli appunti, potrebbero essere la sorgente del software";
+
+/* Patcher not installed */
+"PATCHER_NOT_INSTALLED" = "Patcher non installato";
 
 /* No comment provided by engineer. */
 "Path List Viewer" = "Visualizzatore dell'elenco dei percorsi";
@@ -396,6 +429,9 @@
 
 /* Recent Update */
 "RECENT_UPDATE" = "Aggiornamenti recenti";
+
+/* Redirecting... */
+"REDIRECTING" = "Reindirizzamento...";
 
 /* Refresh */
 "REFRESH" = "Aggiorna";
@@ -496,6 +532,9 @@
 /* Share */
 "SHARE" = "Condividi";
 
+/* Share Failed */
+"SHARE_FAILED" = "Condivisione fallita";
+
 /* Sign Out */
 "SIGN_OUT" = "Esci";
 
@@ -543,6 +582,9 @@
 
 /* Unknown Error Occurred */
 "UNKNOWN_ERROR_OCCURRED" = "Si è verificato un errore sconosciuto";
+
+/* Unknown size */
+"UNKNOWN_SIZE" = "Dimensione sconosciuta";
 
 /* Unlocking system */
 "UNLOCKING_SYSTEM" = "Sblocco sistema";

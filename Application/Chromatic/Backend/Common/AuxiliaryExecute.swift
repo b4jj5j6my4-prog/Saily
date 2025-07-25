@@ -36,8 +36,11 @@ enum AuxiliaryExecuteWrapper {
     ]
 
     static func setupSearchPath() {
-        if FileManager.default.fileExists(atPath: "/var/jb/Library/dpkg/status") {
-            binarySearchPath = ["/var/jb/usr/bin"]
+        let jbrootPath = String(jbroot("/") as String).dropLast()
+        let isRoothide = FileManager.default.fileExists(atPath: "\(jbrootPath)/Library/dpkg/status")
+        if isRoothide {
+            let jbrootBin = "\(jbrootPath)/usr/bin"
+            binarySearchPath = [jbrootBin]
         }
         if let path = ProcessInfo.processInfo.environment["PATH"] {
             binarySearchPath = path.components(separatedBy: ":") + binarySearchPath

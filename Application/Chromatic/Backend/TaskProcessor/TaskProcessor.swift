@@ -18,22 +18,18 @@ class TaskProcessor {
     public private(set) var inProcessingQueue: Bool = false
     private let accessLock = NSLock()
 
-    private let isRootlessEnvironment: Bool
-    public var rootlessPrefix = "/var/jb"
+    private let isRoothideEnvironment: Bool
+    public var roothidePrefix: String
 
     private init() {
-        let res = AuxiliaryExecuteWrapper.rootspawn(command: "/var/jb/bin/readlink",
-                                                    args: ["-f", "/var/jb"],
-                                                    timeout: 2) { _ in }
-        rootlessPrefix = (res.1).trimmingCharacters(in: .whitespacesAndNewlines)
-
-        if FileManager.default.fileExists(atPath: "\(rootlessPrefix)/Library/dpkg/status") {
+        let jbrootPath = String(String(jbroot("/") as String).dropLast())
+        roothidePrefix = jbrootPath
+        isRoothideEnvironment = FileManager.default.fileExists(atPath: "\(jbrootPath)/Library/dpkg/status")
+        
+        if isRoothideEnvironment {
             Dog.shared.join("TaskProcessor",
-                            "rootless environment detected, insert dpkg flag",
+                            "roothide environment detected, insert dpkg flag",
                             level: .info)
-            isRootlessEnvironment = true
-        } else {
-            isRootlessEnvironment = false
         }
 
         workingLocation = documentsDirectory.appendingPathComponent("Installer")
@@ -118,7 +114,7 @@ class TaskProcessor {
 
         // MARK: - GET A LIST OF /Applications SO WE CAN HANDLE REMOVE
 
-        let applicationsPath = "\(isRootlessEnvironment ? rootlessPrefix : "")/Applications"
+        let applicationsPath = "\(isRoothideEnvironment ? roothidePrefix : "")/Applications"
         output("\n[*] using applications path \(applicationsPath)\n")
 
         let beforeOperationApplicationList = (
@@ -134,7 +130,7 @@ class TaskProcessor {
             output("\n===>\n")
             output(NSLocalizedString("UNLOCKING_SYSTEM", comment: "Unlocking system") + "\n")
             let result = AuxiliaryExecuteWrapper.rootspawn(command: AuxiliaryExecuteWrapper.rm,
-                                                           args: ["-f", "\(isRootlessEnvironment ? rootlessPrefix : "")/var/lib/dpkg/lock"],
+                                                           args: ["-f", "\(isRoothideEnvironment ? roothidePrefix : "")/var/lib/dpkg/lock"],
                                                            timeout: 1)
             { str in
                 output(str)
@@ -152,8 +148,8 @@ class TaskProcessor {
                     "--purge",
                     "--force-all",
                 ]
-                if isRootlessEnvironment {
-                    // arguments += ["--root=\(rootlessPrefix)"]
+                if isRoothideEnvironment {
+                    // arguments += ["--root=\(roothidePrefix)"]
                 }
                 if operation.dryRun { arguments.append("--dry-run") }
                 for item in operation.remove {
@@ -181,7 +177,7 @@ class TaskProcessor {
                     "--force-all",
                     "--force-confdef",
                 ]
-                // if isRootlessEnvironment { arguments += ["--root=\(rootlessPrefix)"] }
+                // if isRoothideEnvironment { arguments += ["--root=\(roothidePrefix)"] }
                 if operation.dryRun { arguments.append("--dry-run") }
                 for item in operation.install {
                     arguments.append(item.1.path)
@@ -207,7 +203,7 @@ class TaskProcessor {
                 "--force-all",
                 "--force-confdef",
             ]
-            // if isRootlessEnvironment { arguments += ["--root=\(rootlessPrefix)"] }
+            // if isRoothideEnvironment { arguments += ["--root=\(roothidePrefix)"] }
             if operation.dryRun { arguments.append("--dry-run") }
             let result = AuxiliaryExecuteWrapper.rootspawn(command: AuxiliaryExecuteWrapper.dpkg,
                                                            args: arguments,
@@ -225,7 +221,7 @@ class TaskProcessor {
             if operation.dryRun { break }
             var modifiedAppList = Set<String>()
             var lookup = [String: String]()
-            let dpkgSearchPath = "\(isRootlessEnvironment ? rootlessPrefix : "")/Library/dpkg/info/"
+            let dpkgSearchPath = "\(isRoothideEnvironment ? roothidePrefix : "")/Library/dpkg/info/"
             var dpkgList = (
                 try? FileManager.default.contentsOfDirectory(atPath: dpkgSearchPath)
             ) ?? []
@@ -236,7 +232,7 @@ class TaskProcessor {
             for item in operation.install.map(\.0) {
                 if let path = lookup["\(item).list"] {
                     var full = "/Library/dpkg/info/\(path)"
-                    if isRootlessEnvironment { full = "\(rootlessPrefix)\(full)" }
+                    if isRoothideEnvironment { full = "\(roothidePrefix)\(full)" }
                     // get the content of the file which contains all the file installed by package
                     let read = (try? String(contentsOf: URL(fileURLWithPath: full))) ?? ""
                     read
@@ -252,7 +248,7 @@ class TaskProcessor {
                         // tweak may install file into SpringBoard.app etc etc
                         // and cause problem if uicache bugged
                         .filter {
-                            $0.path.hasPrefix("\(isRootlessEnvironment ? rootlessPrefix : "")/Applications")
+                            $0.path.hasPrefix("\(isRoothideEnvironment ? roothidePrefix : "")/Applications")
                         }
                         // put them into the Set<String>
                         .forEach { modifiedAppList.insert($0.path) }

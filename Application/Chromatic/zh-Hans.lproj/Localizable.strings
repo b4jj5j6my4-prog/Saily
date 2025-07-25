@@ -103,6 +103,12 @@
 /* Confirm */
 "CONFIRM" = "确认";
 
+/* Please contact @roothideDev to update it */
+"CONTACT_ROOTHIDE_DEV" = "请联系 @roothideDev 更新它";
+
+/* Convert */
+"CONVERT_BUTTON" = "转换";
+
 /* Copied */
 "COPIED" = "已复制";
 
@@ -166,6 +172,9 @@
 /* Your download can be resumed any time. */
 "DOWNLOAD_CAN_RESUME_ANY_TIME" = "下载缓存支持断点续传";
 
+/* Download Failed */
+"DOWNLOAD_FAILED" = "下载失败";
+
 /* Downloaded file can be found in setting. */
 "DOWNLOADED_FILE_CAN_BE_FOUND_IN_SETTING" = "下载文件可在设置中找到";
 
@@ -208,6 +217,12 @@
 /* Failed to create operation payload, incomplete download or broken resources. Please try again later. */
 "FAILED_TO_CREATE_PAYLOAD_MAYBE_DOWNLOAD_FAILED" = "无法创建操作数据，下载未完成或数据已损坏。请稍后再试。";
 
+/* Failed to get file */
+"FAILED_TO_GET_FILE" = "获取文件失败";
+
+/* Failed to open Patcher */
+"FAILED_TO_OPEN_PATCHER" = "无法打开 Patcher";
+
 /* Failed to verify package */
 "FAILED_VERIFY_PACKAGE" = "软件包数据校验失败";
 
@@ -222,6 +237,9 @@
 
 /* Found author with this search key. */
 "FOUND_AUTHOR_WITH_NAME" = "使用此搜索关键词已找到该作者";
+
+/* Get Patcher */
+"GET_PATCHER" = "获取 Patcher";
 
 /* History Records */
 "HISTORY_RECORDS" = "历史记录";
@@ -252,6 +270,9 @@
 
 /* No comment provided by engineer. */
 "Invalid URL" = "无效的链接";
+
+/* Invalid package path */
+"INVALID_PACKAGE_PATH" = "无效的软件包路径";
 
 /* Last Modification */
 "LAST_MODIFICATION" = "修改日期";
@@ -313,6 +334,9 @@
 /* Not Modified */
 "NOT_MODIFIED" = "没有变更";
 
+/* OK */
+"OK" = "确定";
+
 /* Native Only */
 "ONLY_NATIVE" = "仅原生";
 
@@ -343,6 +367,12 @@
 /* Package Detail */
 "PACKAGE_DETAIL" = "软件包详情";
 
+/* Not Updated */
+"PACKAGE_NOT_UPDATED" = "未更新";
+
+/* %@(%@)\n\nYou can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher. */
+"PACKAGE_UPDATE_REQUIRED_FORMAT" = "%@（%@）\n\n你可以联系这个软件包的开发者以适配 roothide，或者你也可以尝试使用 roothide Patcher 进行转换。";
+
 /* Packages */
 "PACKAGES" = "软件包";
 
@@ -351,6 +381,9 @@
 
 /* We found these links in the clipboard, they may be the source of the software */
 "PASTEBOARD_REPO_DESCRIPTION" = "我们在剪贴板中找到了这些软件源记录。";
+
+/* Patcher not installed */
+"PATCHER_NOT_INSTALLED" = "Patcher 未安装";
 
 /* No comment provided by engineer. */
 "Path List Viewer" = "路径检查器";
@@ -396,6 +429,9 @@
 
 /* Recent Update */
 "RECENT_UPDATE" = "最近更新";
+
+/* Redirecting... */
+"REDIRECTING" = "正在跳转";
 
 /* Refresh */
 "REFRESH" = "刷新";
@@ -496,6 +532,9 @@
 /* Share */
 "SHARE" = "分享";
 
+/* Share Failed */
+"SHARE_FAILED" = "分享失败";
+
 /* Sign Out */
 "SIGN_OUT" = "注销";
 
@@ -543,6 +582,9 @@
 
 /* Unknown Error Occurred */
 "UNKNOWN_ERROR_OCCURRED" = "未知错误";
+
+/* Unknown size */
+"UNKNOWN_SIZE" = "未知大小";
 
 /* Unlocking system */
 "UNLOCKING_SYSTEM" = "解锁系统资源";

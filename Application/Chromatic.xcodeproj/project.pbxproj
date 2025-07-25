@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031B27362E312C3300CF3824 /* libroothide.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 031B27342E312C3300CF3824 /* libroothide.tbd */; };
+		031B27492E33863100CF3824 /* libroothide.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 031B27342E312C3300CF3824 /* libroothide.tbd */; };
+		03B05C212E3122CF004AF1DB /* AppFileShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B05C202E3122CF004AF1DB /* AppFileShare.m */; };
+		03B05C222E3122CF004AF1DB /* AppFileShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B05C202E3122CF004AF1DB /* AppFileShare.m */; };
 		500034802469765800890951 /* Sections.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5000347F2469765800890951 /* Sections.xcassets */; };
 		500A2E5A26D12C0100A1DA03 /* AptScanner+Remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A2E5926D12C0100A1DA03 /* AptScanner+Remove.swift */; };
 		500C977526DA475800B66AB3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C977426DA475800B66AB3 /* SettingView.swift */; };
@@ -336,6 +340,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		031B272C2E31269E00CF3824 /* roothide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = roothide.h; sourceTree = "<group>"; };
+		031B27342E312C3300CF3824 /* libroothide.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libroothide.tbd; sourceTree = "<group>"; };
 		03B05C042E311B57004AF1DB /* AptPackageVersion */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AptPackageVersion; path = ../Foundation/AptPackageVersion; sourceTree = SOURCE_ROOT; };
 		03B05C052E311B57004AF1DB /* AptRepository */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AptRepository; path = ../Foundation/AptRepository; sourceTree = SOURCE_ROOT; };
 		03B05C062E311B57004AF1DB /* AuxiliaryExecute */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AuxiliaryExecute; path = ../Foundation/AuxiliaryExecute; sourceTree = SOURCE_ROOT; };
@@ -362,6 +368,8 @@
 		03B05C1B2E311B57004AF1DB /* SwiftMD5 */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftMD5; path = ../Foundation/SwiftMD5; sourceTree = SOURCE_ROOT; };
 		03B05C1C2E311B57004AF1DB /* SwiftThrottle */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftThrottle; path = ../Foundation/SwiftThrottle; sourceTree = SOURCE_ROOT; };
 		03B05C1D2E311B57004AF1DB /* Tuner */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Tuner; path = ../Foundation/Tuner; sourceTree = SOURCE_ROOT; };
+		03B05C1F2E3122CF004AF1DB /* AppFileShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppFileShare.h; sourceTree = "<group>"; };
+		03B05C202E3122CF004AF1DB /* AppFileShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppFileShare.m; sourceTree = "<group>"; };
 		5000347F2469765800890951 /* Sections.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sections.xcassets; sourceTree = "<group>"; };
 		500A2E5926D12C0100A1DA03 /* AptScanner+Remove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AptScanner+Remove.swift"; sourceTree = "<group>"; };
 		500C977426DA475800B66AB3 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -529,6 +537,7 @@
 				507D4B3D2C8063F300CA34C5 /* JsonDepiction in Frameworks */,
 				507D4B3E2C8063F300CA34C5 /* SPIndicator in Frameworks */,
 				507D4B3F2C8063F300CA34C5 /* MorphingLabel in Frameworks */,
+				031B27362E312C3300CF3824 /* libroothide.tbd in Frameworks */,
 				507D4B402C8063F300CA34C5 /* FLAnimatedImage in Frameworks */,
 				507D4B412C8063F300CA34C5 /* SwiftThrottle in Frameworks */,
 				507D4B422C8063F300CA34C5 /* AuxiliaryExecute in Frameworks */,
@@ -551,6 +560,7 @@
 				507D1E8F26BFA8BC00E72E9B /* BitByteData in Frameworks */,
 				50527FFC26CFF6A600FD846D /* FluentIcon in Frameworks */,
 				50A8053326CB833D00F8FB7D /* LNPopupController-Static in Frameworks */,
+				031B27492E33863100CF3824 /* libroothide.tbd in Frameworks */,
 				50940CA227C618D400075B48 /* PathListTableViewController in Frameworks */,
 				507D1E9126BFA8BF00E72E9B /* AptRepository in Frameworks */,
 				507D1E7726BFA88500E72E9B /* SWCompression in Frameworks */,
@@ -1047,11 +1057,15 @@
 		6865D586246856C20073EF2A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				03B05C1F2E3122CF004AF1DB /* AppFileShare.h */,
+				03B05C202E3122CF004AF1DB /* AppFileShare.m */,
 				5018EFAB24599B0F0040DF86 /* Bridge.h */,
 				50534ABC294310B700EED01F /* PlatformSetup.h */,
+				031B272C2E31269E00CF3824 /* roothide.h */,
 				50534ABD294310B700EED01F /* PlatformSetup.m */,
 				507D4AA12C8062CD00CA34C5 /* CoreTelephony.Sim.tbd */,
 				507D4AA22C8062CD00CA34C5 /* CoreTelephony.tbd */,
+				031B27342E312C3300CF3824 /* libroothide.tbd */,
 				50DBCBBD26D393EB007D2E73 /* AppleAvatar.swift */,
 				5012080026D37C5000E9C656 /* AuxiliaryExecute.swift */,
 				50274CC126D68DB2000EF6BB /* DeviceInfo.swift */,
@@ -1360,6 +1374,7 @@
 				507D4AF32C8063F300CA34C5 /* AppleCardColor.swift in Sources */,
 				507D4AF42C8063F300CA34C5 /* IBPackageCollection.swift in Sources */,
 				507D4AF52C8063F300CA34C5 /* PackageBanner+Actions.swift in Sources */,
+				03B05C222E3122CF004AF1DB /* AppFileShare.m in Sources */,
 				507D4AF62C8063F300CA34C5 /* RepoAddController.swift in Sources */,
 				507D4AF72C8063F300CA34C5 /* SearchPlaceholder.swift in Sources */,
 				507D4AF82C8063F300CA34C5 /* CariolNetwork.swift in Sources */,
@@ -1479,6 +1494,7 @@
 				503401F526BFD5B900E8D02B /* AppleCardColor.swift in Sources */,
 				505E17AE26EE59AB00F32B88 /* IBPackageCollection.swift in Sources */,
 				5021E31C26CF76FF00D57E51 /* PackageBanner+Actions.swift in Sources */,
+				03B05C212E3122CF004AF1DB /* AppFileShare.m in Sources */,
 				5034022126C003E600E8D02B /* RepoAddController.swift in Sources */,
 				50E1823926C76F6600C6894F /* SearchPlaceholder.swift in Sources */,
 				508E475826D5364A00D0806F /* CariolNetwork.swift in Sources */,

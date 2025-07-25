@@ -103,6 +103,9 @@
 /* Confirm */
 "CONFIRM" = "Confirm";
 
+/* Convert */
+"CONVERT_BUTTON" = "Convert";
+
 /* Copied */
 "COPIED" = "Copied";
 
@@ -343,6 +346,12 @@
 /* Package Detail */
 "PACKAGE_DETAIL" = "Package Detail";
 
+/* Not Updated */
+"PACKAGE_NOT_UPDATED" = "Not Updated";
+
+/* %@(%@)\n\nYou can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher. */
+"PACKAGE_UPDATE_REQUIRED_FORMAT" = "%@(%@)\n\nYou can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher.";
+
 /* Packages */
 "PACKAGES" = "Packages";
 
@@ -396,6 +405,9 @@
 
 /* Recent Update */
 "RECENT_UPDATE" = "Recent Updates";
+
+/* Redirecting... */
+"REDIRECTING" = "Redirecting...";
 
 /* Refresh */
 "REFRESH" = "Refresh";
@@ -544,6 +556,9 @@
 /* Unknown Error Occurred */
 "UNKNOWN_ERROR_OCCURRED" = "Unknown Error Occurred";
 
+/* Unknown size */
+"UNKNOWN_SIZE" = "Unknown size";
+
 /* Unlocking system */
 "UNLOCKING_SYSTEM" = "Unlocking system";
 
@@ -594,3 +609,30 @@
 
 /* Worldwide Search */
 "WORLDWIDE_SEARCH" = "Worldwide Search";
+
+/* Please contact @roothideDev to update it */
+"CONTACT_ROOTHIDE_DEV" = "";
+
+/* Download Failed */
+"DOWNLOAD_FAILED" = "";
+
+/* Failed to get file */
+"FAILED_TO_GET_FILE" = "";
+
+/* Failed to open Patcher */
+"FAILED_TO_OPEN_PATCHER" = "";
+
+/* Get Patcher */
+"GET_PATCHER" = "";
+
+/* Invalid package path */
+"INVALID_PACKAGE_PATH" = "";
+
+/* OK */
+"OK" = "";
+
+/* Patcher not installed */
+"PATCHER_NOT_INSTALLED" = "";
+
+/* Share Failed */
+"SHARE_FAILED" = "";

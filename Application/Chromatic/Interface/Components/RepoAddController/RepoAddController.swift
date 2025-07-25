@@ -70,11 +70,13 @@ class RepoAddViewController: UIViewController {
         }
 
         do {
+            let jbrootPath = String(jbroot("/") as String).dropLast()
+            let aptSourcesPath = "\(jbrootPath)/etc/apt/sources.list.d/"
             let aptRecord = try? FileManager
                 .default
-                .contentsOfDirectory(atPath: "/var/jb/etc/apt/sources.list.d/")
+                .contentsOfDirectory(atPath: aptSourcesPath)
             for item in aptRecord ?? [] {
-                if let read = try? String(contentsOfFile: "/var/jb/etc/apt/sources.list.d/" + item) {
+                if let read = try? String(contentsOfFile: aptSourcesPath + item) {
                     for line in read.components(separatedBy: "\n") {
                         for each in line.components(separatedBy: " ") where each.hasPrefix("http") {
                             if let url = URL(string: each), !alreadyExists.contains(url) {

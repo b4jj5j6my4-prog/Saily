@@ -103,6 +103,12 @@
 /* Confirm */
 "CONFIRM" = "Xác Nhận";
 
+/* Please contact @roothideDev to update it */
+"CONTACT_ROOTHIDE_DEV" = "Vui lòng liên hệ với @roothideDev để cập nhật nó";
+
+/* Convert */
+"CONVERT_BUTTON" = "Chuyển đổi";
+
 /* Copied */
 "COPIED" = "Đã sao chép";
 
@@ -166,6 +172,9 @@
 /* Your download can be resumed any time. */
 "DOWNLOAD_CAN_RESUME_ANY_TIME" = "Tiến trình tải xuống của bạn có thể tiếp tục bất kì lúc nào.";
 
+/* Download Failed */
+"DOWNLOAD_FAILED" = "Tải xuống thất bại";
+
 /* Downloaded file can be found in setting. */
 "DOWNLOADED_FILE_CAN_BE_FOUND_IN_SETTING" = "Tệp đã tải xuống có thể tìm thấy trong cài đặt.";
 
@@ -208,6 +217,12 @@
 /* Failed to create operation payload, incomplete download or broken resources. Please try again later. */
 "FAILED_TO_CREATE_PAYLOAD_MAYBE_DOWNLOAD_FAILED" = "Không thể tái tạo hoạt động, tải xuống không hoàn chỉnh hoặc tài nguyên bị hỏng. Vui lòng thử lại sau.";
 
+/* Failed to get file */
+"FAILED_TO_GET_FILE" = "Không thể lấy tệp";
+
+/* Failed to open Patcher */
+"FAILED_TO_OPEN_PATCHER" = "Không thể mở Patcher";
+
 /* Failed to verify package */
 "FAILED_VERIFY_PACKAGE" = "Không thể xác minh gói";
 
@@ -222,6 +237,9 @@
 
 /* Found author with this search key. */
 "FOUND_AUTHOR_WITH_NAME" = "Tìm kiếm với tên Tác Giả.";
+
+/* Get Patcher */
+"GET_PATCHER" = "Tải Patcher";
 
 /* History Records */
 "HISTORY_RECORDS" = "Hồ sơ Lịch Sử";
@@ -252,6 +270,9 @@
 
 /* No comment provided by engineer. */
 "Invalid URL" = "URL không hợp lệ";
+
+/* Invalid package path */
+"INVALID_PACKAGE_PATH" = "Đường dẫn gói không hợp lệ";
 
 /* Last Modification */
 "LAST_MODIFICATION" = "Lần cuối cài đặt";
@@ -313,6 +334,9 @@
 /* Not Modified */
 "NOT_MODIFIED" = "Không thể sửa đổi";
 
+/* OK */
+"OK" = "OK";
+
 /* Native Only */
 "ONLY_NATIVE" = "Chỉ Địa Phương";
 
@@ -343,6 +367,12 @@
 /* Package Detail */
 "PACKAGE_DETAIL" = "Chi tiết Gói";
 
+/* Not Updated */
+"PACKAGE_NOT_UPDATED" = "Chưa cập nhật";
+
+/* %@(%@)\n\nYou can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher. */
+"PACKAGE_UPDATE_REQUIRED_FORMAT" = "%@(%@)\n\nBạn có thể liên hệ với nhà phát triển gói này để cập nhật cho roothide, hoặc bạn có thể thử chuyển đổi nó qua roothide Patcher.";
+
 /* Packages */
 "PACKAGES" = "Các Gói";
 
@@ -351,6 +381,9 @@
 
 /* We found these links in the clipboard, they may be the source of the software */
 "PASTEBOARD_REPO_DESCRIPTION" = "Chúng tôi đã tìm thấy những liên kết này trong clipboard, chúng có thể là nguồn gốc của phần mềm.";
+
+/* Patcher not installed */
+"PATCHER_NOT_INSTALLED" = "Patcher chưa được cài đặt";
 
 /* No comment provided by engineer. */
 "Path List Viewer" = "Trình Xem Danh Sách Đường Dẫn";
@@ -396,6 +429,9 @@
 
 /* Recent Update */
 "RECENT_UPDATE" = "Cập nhật gần đây";
+
+/* Redirecting... */
+"REDIRECTING" = "Đang chuyển hướng...";
 
 /* Refresh */
 "REFRESH" = "Làm Mới";
@@ -496,6 +532,9 @@
 /* Share */
 "SHARE" = "Chia Sẻ";
 
+/* Share Failed */
+"SHARE_FAILED" = "Chia sẻ thất bại";
+
 /* Sign Out */
 "SIGN_OUT" = "Đăng Xuất";
 
@@ -543,6 +582,9 @@
 
 /* Unknown Error Occurred */
 "UNKNOWN_ERROR_OCCURRED" = "Đã Xảy Ra Lỗi Không Xác Định";
+
+/* Unknown size */
+"UNKNOWN_SIZE" = "Kích thước không xác định";
 
 /* Unlocking system */
 "UNLOCKING_SYSTEM" = "Mở Khoá Hệ Thống";

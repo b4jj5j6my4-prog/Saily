@@ -104,6 +104,12 @@
    CONFIRM */
 "CONFIRM" = "確認";
 
+/* Please contact @roothideDev to update it */
+"CONTACT_ROOTHIDE_DEV" = "@roothideDevに更新を依頼してください";
+
+/* Convert */
+"CONVERT_BUTTON" = "変換";
+
 /* Copied
    Cpoied */
 "COPIED" = "コピーしました";
@@ -168,6 +174,9 @@
 /* Your download can be resumed any time. */
 "DOWNLOAD_CAN_RESUME_ANY_TIME" = "ダウンロードはいつでも再開できます。";
 
+/* Download Failed */
+"DOWNLOAD_FAILED" = "ダウンロードに失敗しました";
+
 /* Downloaded file can be found in setting. */
 "DOWNLOADED_FILE_CAN_BE_FOUND_IN_SETTING" = "ダウンロードしたファイルは設定で確認することができます。";
 
@@ -210,6 +219,12 @@
 /* Failed to create operation payload, incomplete download or broken resources. Please try again later. */
 "FAILED_TO_CREATE_PAYLOAD_MAYBE_DOWNLOAD_FAILED" = "支払いに失敗しました。ダウンロードが完了しないか、無効なリソースの可能性があります。時間をおいてもう一度やり直してください。";
 
+/* Failed to get file */
+"FAILED_TO_GET_FILE" = "ファイルの取得に失敗しました";
+
+/* Failed to open Patcher */
+"FAILED_TO_OPEN_PATCHER" = "Patcherを開けませんでした";
+
 /* Failed to verify package */
 "FAILED_VERIFY_PACKAGE" = "パッケージの検証に失敗しました";
 
@@ -224,6 +239,9 @@
 
 /* Found author with this search key. */
 "FOUND_AUTHOR_WITH_NAME" = "このキーワードを含む作者が見つかりました。";
+
+/* Get Patcher */
+"GET_PATCHER" = "Patcherを入手";
 
 /* History Records */
 "HISTORY_RECORDS" = "履歴";
@@ -254,6 +272,9 @@
 
 /* No comment provided by engineer. */
 "Invalid URL" = "無効なURL";
+
+/* Invalid package path */
+"INVALID_PACKAGE_PATH" = "無効なパッケージパス";
 
 /* Last Modification */
 "LAST_MODIFICATION" = "変更日時";
@@ -315,6 +336,9 @@
 /* Not Modified */
 "NOT_MODIFIED" = "変更されていません";
 
+/* OK */
+"OK" = "OK";
+
 /* Native Only */
 "ONLY_NATIVE" = "Native Only";
 
@@ -345,6 +369,12 @@
 /* Package Detail */
 "PACKAGE_DETAIL" = "パッケージの詳細";
 
+/* Not Updated */
+"PACKAGE_NOT_UPDATED" = "未更新";
+
+/* %@(%@)\n\nYou can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher. */
+"PACKAGE_UPDATE_REQUIRED_FORMAT" = "%@(%@)\n\nこのパッケージの開発者に連絡してroothide用に更新するか、roothide Patcherを使用して変換してみることができます。";
+
 /* Packages */
 "PACKAGES" = "パッケージ";
 
@@ -353,6 +383,9 @@
 
 /* We found these links in the clipboard, they may be the source of the software */
 "PASTEBOARD_REPO_DESCRIPTION" = "クリップボードでこれらのリンクを見つけました。ここから選択することでリポジトリを追加できます。";
+
+/* Patcher not installed */
+"PATCHER_NOT_INSTALLED" = "Patcherがインストールされていません";
 
 /* No comment provided by engineer. */
 "Path List Viewer" = "パスリストビューア";
@@ -398,6 +431,9 @@
 
 /* Recent Update */
 "RECENT_UPDATE" = "最近アップデートされたもの";
+
+/* Redirecting... */
+"REDIRECTING" = "リダイレクト中...";
 
 /* Refresh */
 "REFRESH" = "更新";
@@ -498,6 +534,9 @@
 /* Share */
 "SHARE" = "共有";
 
+/* Share Failed */
+"SHARE_FAILED" = "共有に失敗しました";
+
 /* Sign Out */
 "SIGN_OUT" = "サインアウト";
 
@@ -546,6 +585,9 @@
 
 /* Unknown Error Occurred */
 "UNKNOWN_ERROR_OCCURRED" = "不明なエラーが発生しました";
+
+/* Unknown size */
+"UNKNOWN_SIZE" = "不明なサイズ";
 
 /* Unlocking system */
 "UNLOCKING_SYSTEM" = "システムのロックを解除";

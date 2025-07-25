@@ -4,3 +4,5 @@
 //
 
 #import "./PlatformSetup.h"
+#import "./AppFileShare.h"
+#import "./roothide.h"
