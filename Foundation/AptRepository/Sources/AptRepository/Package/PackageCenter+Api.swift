@@ -142,7 +142,10 @@ public extension PackageCenter {
             if let version = item.latestVersion {
                 let compare = Package.compareVersion(version, b: current)
                 if compare == .aIsBiggerThenB {
-                    result.append(item)
+                    let architecture = item.latestMetadata?["architecture"] as? String ?? ""
+                    if architecture.contains("arm64e") {
+                        result.append(item)
+                    }
                 }
             }
         }
