@@ -35,22 +35,21 @@ func invokePackages(withContext original: String, fromRepo: URL? = nil) -> [Stri
                 return
             }
             guard let architecture = metadata["architecture"], architecture != "iphoneos-arm" else { return }
-            
+
             if let package = resultBuilder[id] {
-                
                 let existingArch = package.latestMetadata?["architecture"] ?? ""
-                
-                if existingArch.contains("arm64e") && !architecture.contains("arm64e") {
+
+                if existingArch.contains("arm64e"), !architecture.contains("arm64e") {
                     return
                 }
 
-                if !existingArch.contains("arm64e") && architecture.contains("arm64e") {
+                if !existingArch.contains("arm64e"), architecture.contains("arm64e") {
                     resultBuilder[id] = Package(identity: id,
-                                               payload: [ver: metadata],
-                                               repoRef: fromRepo)
+                                                payload: [ver: metadata],
+                                                repoRef: fromRepo)
                     return
                 }
-                
+
                 var newpayload = package.payload
                 newpayload[ver] = metadata
                 let newPackage = Package(identity: package.identity,

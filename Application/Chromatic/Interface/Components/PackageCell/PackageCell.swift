@@ -179,11 +179,11 @@ class PackageCell: UIView, PackageCellFunction {
                 .loadImage(with: url,
                            options: .highPriority,
                            progress: nil)
-            { [weak self] image, _, _, _, _, _ in
-                if let image, self?.currentToken == token {
-                    self?.avatar.image = image
+                { [weak self] image, _, _, _, _, _ in
+                    if let image, self?.currentToken == token {
+                        self?.avatar.image = image
+                    }
                 }
-            }
         }
 
         if package.latestMetadata?["tag"]?.contains("cydia::commercial") ?? false {

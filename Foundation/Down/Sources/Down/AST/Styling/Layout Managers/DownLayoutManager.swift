@@ -117,7 +117,6 @@
             textStorage?.enumerateAttributes(for: .thematicBreak,
                                              in: characterRange)
             { (attr: ThematicBreakAttribute, range) in
-
                 let firstGlyphIndex = glyphIndexForCharacter(at: range.lowerBound)
 
                 let lineRect = lineFragmentRect(forGlyphAt: firstGlyphIndex, effectiveRange: nil)
@@ -156,7 +155,6 @@
             textStorage?.enumerateAttributes(for: .quoteStripe,
                                              in: characterRange)
             { (attr: QuoteStripeAttribute, quoteRange) in
-
                 context.setFillColor(attr.color.cgColor)
 
                 let glyphRangeOfQuote = self.glyphRange(forCharacterRange: quoteRange, actualCharacterRange: nil)

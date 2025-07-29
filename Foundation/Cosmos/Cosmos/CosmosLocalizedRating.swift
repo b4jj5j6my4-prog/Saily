@@ -97,7 +97,6 @@ enum CosmosLocalizedRating {
 
     static func preferredLanguages(_ preferredLocales: [String]) -> [String] {
         preferredLocales.map { element in
-
             let dashSeparated = element.components(separatedBy: "-")
             if dashSeparated.count > 1 { return dashSeparated[0] }
 

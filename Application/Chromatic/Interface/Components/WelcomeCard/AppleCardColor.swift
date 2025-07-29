@@ -150,7 +150,7 @@ class AppleCardColorProvider {
     }
 
     typealias RecordType = [Record]
-    public var records: RecordType {
+    var records: RecordType {
         set {
             if let data = try? encoder.encode(newValue) {
                 recordData = data
@@ -168,8 +168,8 @@ class AppleCardColorProvider {
         }
     }
 
-    public var _cacheWidth: Int = 320
-    public var cacheWidth: Int {
+    var _cacheWidth: Int = 320
+    var cacheWidth: Int {
         set {
             if newValue < 10 {
                 return
@@ -182,7 +182,7 @@ class AppleCardColorProvider {
     }
 
     private var _cacheHeight: Int = 180
-    public var cacheHeight: Int {
+    var cacheHeight: Int {
         set {
             if newValue < 10 {
                 return

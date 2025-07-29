@@ -147,6 +147,7 @@ extension PackageCenter {
         let date = Date()
 
         DispatchQueue.global().async { // don't use [self] in to get things complicated
+
             // MARK: - INSTALL TRACE
 
             var installTraceBuilder = self.installationTrace

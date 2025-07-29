@@ -26,9 +26,9 @@ class CariolNetwork {
 
     static let shared = CariolNetwork()
 
-    public private(set) var workingLocation: URL
+    private(set) var workingLocation: URL
 
-    public let illegalFileNameCharacters: CharacterSet = {
+    let illegalFileNameCharacters: CharacterSet = {
         var invalidCharacters = CharacterSet(charactersIn: ":/")
         invalidCharacters.formUnion(.newlines)
         invalidCharacters.formUnion(.illegalCharacters)
@@ -47,7 +47,7 @@ class CariolNetwork {
 
     @PropertiesWrapper(key: "cariol.network", defaultValue: Data())
     private var _completedFileLookup: Data
-    public var completedFileLookup: [URL: URL] {
+    var completedFileLookup: [URL: URL] {
         set {
             _completedFileLookup = (try? JSONEncoder().encode(newValue)) ?? Data()
         }

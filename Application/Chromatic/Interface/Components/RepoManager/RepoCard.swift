@@ -34,21 +34,21 @@ class RepoCard: UIView {
 
     private var lastUpdateTouched: Date?
 
-    public var suggestHeight: CGFloat {
+    var suggestHeight: CGFloat {
         let count = RepositoryCenter.default.obtainRepositoryCount()
         return count < 1
             ? cellHeight + 100
             : CGFloat(count * Int(cellHeight) + 100)
     }
 
-    public enum ActionParent: String, Codable {
+    enum ActionParent: String, Codable {
         case add
 //        case reload
 //        case scan
 //        case share
     }
 
-    public var actionOverride = [ActionParent: () -> Void]()
+    var actionOverride = [ActionParent: () -> Void]()
 
     @available(*, unavailable)
     required init?(coder _: NSCoder) { fatalError() }

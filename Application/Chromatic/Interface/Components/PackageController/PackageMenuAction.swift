@@ -117,7 +117,6 @@ class PackageMenuAction {
     // MARK: - INSTALL KIND
 
     static let resolveInstallRequest = { (package: Package, view: UIView) in
-
         if let version = package.latestVersion,
            let trimmedPackage = PackageCenter
            .default
@@ -131,33 +130,33 @@ class PackageMenuAction {
                 let packageId = trimmedPackage.identity
                 let version = trimmedPackage.latestVersion ?? "unknown"
                 let repoHost = trimmedPackage.repoRef?.host
-                
+
                 let title = NSLocalizedString("PACKAGE_NOT_UPDATED", comment: "Not Updated")
-                
+
                 let isSpecialRepo = ["apt.procurs.us", "ellekit.space"].contains(repoHost)
-                let msg = isSpecialRepo ? 
-                    NSLocalizedString("CONTACT_ROOTHIDE_DEV", comment: "Please contact @roothideDev to update it") : 
+                let msg = isSpecialRepo ?
+                    NSLocalizedString("CONTACT_ROOTHIDE_DEV", comment: "Please contact @roothideDev to update it") :
                     String(format: NSLocalizedString("PACKAGE_UPDATE_REQUIRED_FORMAT", comment: "%@(%@)\n\nYou can contact the developer of this package to update it for roothide, or you can try to convert it via roothide Patcher."), packageId, version)
-                
+
                 let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-                
+
                 let isPatcherInstalled = PackageCenter.default.obtainPackageInstallationInfo(with: "com.roothide.patcher") != nil
-                
+
                 if !isSpecialRepo {
-                    let patchActionTitle = isPatcherInstalled ? 
-                        NSLocalizedString("CONVERT_BUTTON", comment: "Convert") : 
+                    let patchActionTitle = isPatcherInstalled ?
+                        NSLocalizedString("CONVERT_BUTTON", comment: "Convert") :
                         NSLocalizedString("GET_PATCHER", comment: "Get Patcher")
-                    
+
                     let patchAction = UIAlertAction(title: patchActionTitle, style: .destructive) { _ in
                         if isPatcherInstalled {
                             alert.dismiss(animated: true) {
                                 let isLocalPackage = trimmedPackage.latestMetadata?[DirectInstallInjectedPackageLocationKey] != nil
-                                
+
                                 if isLocalPackage {
                                     if let localPath = trimmedPackage.latestMetadata?[DirectInstallInjectedPackageLocationKey] as? String {
                                         if IsAppAvailable("com.roothide.patcher") {
                                             let result = ShareFileToApp("com.roothide.patcher", localPath)
-                                            
+
                                             if !result {
                                                 SPIndicator.present(
                                                     title: NSLocalizedString("SHARE_FAILED", comment: "Share Failed"),
@@ -185,70 +184,71 @@ class PackageMenuAction {
                                         message: NSLocalizedString("REDIRECTING", comment: "Redirecting..."),
                                         preferredStyle: .alert
                                     )
-                                    
+
                                     let progressView = UIProgressView(progressViewStyle: .default)
                                     progressView.progress = 0
                                     progressView.translatesAutoresizingMaskIntoConstraints = false
-                                    
+
                                     progressAlert.view.addSubview(progressView)
                                     NSLayoutConstraint.activate([
                                         progressView.leadingAnchor.constraint(equalTo: progressAlert.view.leadingAnchor, constant: 20),
                                         progressView.trailingAnchor.constraint(equalTo: progressAlert.view.trailingAnchor, constant: -20),
                                         progressView.bottomAnchor.constraint(equalTo: progressAlert.view.bottomAnchor, constant: -60),
-                                        progressView.heightAnchor.constraint(equalToConstant: 2)
+                                        progressView.heightAnchor.constraint(equalToConstant: 2),
                                     ])
-                                    
+
                                     let cancelAction = UIAlertAction(title: NSLocalizedString("CANCEL", comment: "Cancel"), style: .cancel) { _ in
                                         NotificationCenter.default.removeObserver(PackageMenuAction.self, name: .DownloadProgress, object: nil)
                                     }
                                     progressAlert.addAction(cancelAction)
-                                    
+
                                     view.parentViewController?.present(progressAlert, animated: true)
-                                    
+
                                     NotificationCenter.default.addObserver(
                                         forName: .DownloadProgress,
                                         object: nil,
                                         queue: .main
                                     ) { notification in
                                         guard let info = notification.object as? CariolNetwork.DownloadNotification,
-                                              info.representUrl == trimmedPackage.obtainDownloadLink() else {
+                                              info.representUrl == trimmedPackage.obtainDownloadLink()
+                                        else {
                                             return
                                         }
-                                        
+
                                         if !info.completed {
                                             let progress = info.progress.fractionCompleted
-                                            
+
                                             let currentBytes = info.progress.completedUnitCount
                                             let totalBytes = info.progress.totalUnitCount
-                                            
+
                                             let currentMB = currentBytes > 0 ? CariolNetwork.shared.byteFormat(bytes: Int(currentBytes)) : "0KB"
                                             let totalMB = totalBytes > 0 ? CariolNetwork.shared.byteFormat(bytes: Int(totalBytes)) : NSLocalizedString("UNKNOWN_SIZE", comment: "Unknown size")
-                                            
+
                                             progressView.progress = Float(progress)
                                             progressAlert.message = "\(currentMB)/\(totalMB)"
                                             return
                                         }
-                                        
+
                                         guard info.completed, let fileURL = info.targetLocation, info.error == nil else {
                                             progressAlert.dismiss(animated: true)
                                             if let error = info.error {
                                                 SPIndicator.present(
-                                                    title: NSLocalizedString("DOWNLOAD_FAILED", comment: "Download Failed"), 
-                                                    message: error.localizedDescription, 
+                                                    title: NSLocalizedString("DOWNLOAD_FAILED", comment: "Download Failed"),
+                                                    message: error.localizedDescription,
                                                     preset: .error
                                                 )
                                             }
                                             NotificationCenter.default.removeObserver(PackageMenuAction.self, name: .DownloadProgress, object: nil)
                                             return
                                         }
-                                        
+
                                         NotificationCenter.default.removeObserver(PackageMenuAction.self, name: .DownloadProgress, object: nil)
-                                        
+
                                         progressAlert.dismiss(animated: true) {
                                             if let correctFileURL = CariolNetwork.shared.obtainDownloadedFile(for: trimmedPackage) {
                                                 if IsAppAvailable("com.roothide.patcher") {
                                                     let result = ShareFileToApp("com.roothide.patcher", correctFileURL.path)
-                                                    
+
                                                     if !result {
                                                         SPIndicator.present(
                                                             title: NSLocalizedString("SHARE_FAILED", comment: "Share Failed"),
@@ -272,7 +272,7 @@ class PackageMenuAction {
                                             }
                                         }
                                     }
-                                    
+
                                     CariolNetwork.shared.syncDownloadRequest(packageList: [trimmedPackage])
                                 }
                             }
@@ -286,20 +286,20 @@ class PackageMenuAction {
                     }
                     alert.addAction(patchAction)
                 }
-                
-                let okTitle = isSpecialRepo ? 
-                    NSLocalizedString("OK", comment: "OK") : 
+
+                let okTitle = isSpecialRepo ?
+                    NSLocalizedString("OK", comment: "OK") :
                     NSLocalizedString("CANCEL", comment: "Cancel")
-                
+
                 let okAction = UIAlertAction(title: okTitle, style: .cancel) { _ in
                     alert.dismiss(animated: true, completion: nil)
                 }
                 alert.addAction(okAction)
-                
+
                 view.parentViewController?.present(alert, animated: true, completion: nil)
                 return
             }
-            
+
             // MARK: - DIRECT INSTALL
 
             if package.latestMetadata?[DirectInstallInjectedPackageLocationKey] != nil {

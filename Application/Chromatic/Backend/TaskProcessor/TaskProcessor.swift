@@ -15,17 +15,17 @@ class TaskProcessor {
     static let shared = TaskProcessor()
 
     var workingLocation: URL
-    public private(set) var inProcessingQueue: Bool = false
+    private(set) var inProcessingQueue: Bool = false
     private let accessLock = NSLock()
 
     private let isRoothideEnvironment: Bool
-    public var roothidePrefix: String
+    var roothidePrefix: String
 
     private init() {
         let jbrootPath = String(String(jbroot("/") as String).dropLast())
         roothidePrefix = jbrootPath
         isRoothideEnvironment = FileManager.default.fileExists(atPath: "\(jbrootPath)/Library/dpkg/status")
-        
+
         if isRoothideEnvironment {
             Dog.shared.join("TaskProcessor",
                             "roothide environment detected, insert dpkg flag",

@@ -170,7 +170,6 @@ extension LTMorphingLabel {
 
         progressClosures["Anvil\(LTMorphingPhases.progress)"] = {
             (index: Int, progress: Float, isNewChar: Bool) in
-
             if !isNewChar {
                 return min(1.0, max(0.0, progress))
             }
@@ -181,7 +180,6 @@ extension LTMorphingLabel {
 
         effectClosures["Anvil\(LTMorphingPhases.disappear)"] = {
             char, index, progress in
-
             LTCharacterLimbo(
                 char: char,
                 rect: self.previousRects[index],
@@ -193,7 +191,6 @@ extension LTMorphingLabel {
 
         effectClosures["Anvil\(LTMorphingPhases.appear)"] = {
             char, index, progress in
-
             var rect = self.newRects[index]
 
             if progress < 1.0 {

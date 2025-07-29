@@ -25,12 +25,12 @@ enum InterfaceBridge {
     }
 
     @PropertiesWrapper(key: "enableShareSheet", defaultValue: false)
-    public static var enableShareSheet: Bool
+    static var enableShareSheet: Bool
 
     @PropertiesWrapper(key: "enableQuickMode", defaultValue: false)
-    public static var enableQuickMode: Bool
+    static var enableQuickMode: Bool
 
-    public static func removeRecoveryFlag(with reason: String, userRequested: Bool) {
+    static func removeRecoveryFlag(with reason: String, userRequested: Bool) {
         if !applicationShouldEnterRecovery || userRequested {
             debugPrint("\(#function) \(reason)")
             try? FileManager.default.removeItem(at: applicationRecoveryFlag)
@@ -40,7 +40,7 @@ enum InterfaceBridge {
     }
 
     @PropertiesWrapper(key: "mainUserAgent", defaultValue: "Saily/3.0 Cydia/1.1.32")
-    public static var mainUserAgent: String
+    static var mainUserAgent: String
 }
 
 public extension PackageDepiction.PreferredDepiction {

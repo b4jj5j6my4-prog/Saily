@@ -168,8 +168,8 @@ extension InterfaceBridge {
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("PROCEED", comment: "Proceed"),
                                           style: .destructive)
-                { _ in
-                    confirmOperations()
+            { _ in
+                confirmOperations()
                 })
             alert.addAction(UIAlertAction(title: NSLocalizedString("CANCEL", comment: "Cancel"),
                                           style: .cancel,

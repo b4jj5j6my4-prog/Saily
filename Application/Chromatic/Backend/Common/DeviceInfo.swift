@@ -17,7 +17,7 @@ class DeviceInfo {
     static let current = DeviceInfo()
 
     @PropertiesWrapper(key: "useRealDeviceInfo", defaultValue: true)
-    public var useRealDeviceInfo: Bool {
+    var useRealDeviceInfo: Bool {
         didSet {
             setupUserAgents()
         }

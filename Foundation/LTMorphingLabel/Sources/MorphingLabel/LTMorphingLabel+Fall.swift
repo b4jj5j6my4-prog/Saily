@@ -32,7 +32,6 @@ extension LTMorphingLabel {
     func FallLoad() {
         progressClosures["Fall\(LTMorphingPhases.progress)"] = {
             (index: Int, progress: Float, isNewChar: Bool) in
-
             if isNewChar {
                 return min(
                     1.0,
@@ -52,7 +51,6 @@ extension LTMorphingLabel {
 
         effectClosures["Fall\(LTMorphingPhases.disappear)"] = {
             char, index, progress in
-
             LTCharacterLimbo(
                 char: char,
                 rect: self.previousRects[index],
@@ -64,7 +62,6 @@ extension LTMorphingLabel {
 
         effectClosures["Fall\(LTMorphingPhases.appear)"] = {
             char, index, progress in
-
             let currentFontSize = CGFloat(
                 LTEasing.easeOutQuint(progress, 0.0, Float(self.font.pointSize))
             )
@@ -81,7 +78,6 @@ extension LTMorphingLabel {
 
         drawingClosures["Fall\(LTMorphingPhases.draw)"] = {
             limbo in
-
             if limbo.drawingProgress > 0.0 {
                 let context = UIGraphicsGetCurrentContext()
                 var charRect = limbo.rect

@@ -13,7 +13,7 @@ protocol CSTextViewActionHandler {
 }
 
 class CSTextView: UIView, CSTextViewActionHandler {
-    public var attributedText: NSAttributedString? {
+    var attributedText: NSAttributedString? {
         set {
             renderView.attributedText = newValue
         }
@@ -23,7 +23,7 @@ class CSTextView: UIView, CSTextViewActionHandler {
     }
 
     var renderView: CSTextRenderView
-    public private(set) var overlayView: UIView
+    private(set) var overlayView: UIView
 
     override init(frame: CGRect) {
         renderView = CSTextRenderView(frame: CGRect(origin: .zero, size: frame.size))

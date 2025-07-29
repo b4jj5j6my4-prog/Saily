@@ -74,7 +74,6 @@ extension LTMorphingLabel {
 
         progressClosures["Burn\(LTMorphingPhases.progress)"] = {
             index, progress, isNewChar in
-
             if !isNewChar {
                 return min(1.0, max(0.0, progress))
             }
@@ -85,7 +84,6 @@ extension LTMorphingLabel {
 
         effectClosures["Burn\(LTMorphingPhases.disappear)"] = {
             char, index, progress in
-
             LTCharacterLimbo(
                 char: char,
                 rect: self.previousRects[index],
@@ -97,7 +95,6 @@ extension LTMorphingLabel {
 
         effectClosures["Burn\(LTMorphingPhases.appear)"] = {
             char, index, progress in
-
             if char != " " {
                 let rect = self.newRects[index]
                 let emitterPosition = CGPoint(
@@ -175,7 +172,6 @@ extension LTMorphingLabel {
 
         drawingClosures["Burn\(LTMorphingPhases.draw)"] = {
             (charLimbo: LTCharacterLimbo) in
-
             if charLimbo.drawingProgress > 0.0 {
                 let (charImage, rect) = self.burningImageForCharLimbo(
                     charLimbo,

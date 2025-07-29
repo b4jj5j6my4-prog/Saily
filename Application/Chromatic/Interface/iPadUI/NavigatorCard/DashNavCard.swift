@@ -152,13 +152,11 @@ class DashNavCard: UIView {
         instCard.select()
     }
 
-    @objc private
-    func updateTaskCardBadgeText() {
+    @objc private func updateTaskCardBadgeText() {
         taskCard.badgeText = String(TaskManager.shared.obtainTaskCount())
     }
 
-    @objc private
-    func updateAvailableUpdateBadge() {
+    @objc private func updateAvailableUpdateBadge() {
         DispatchQueue.global().async {
             let count = InterfaceBridge.availableUpdateCount()
             DispatchQueue.main.async { [self] in

@@ -94,13 +94,13 @@ extension PackageController {
                                         .loadImage(with: urlBanner,
                                                    options: .highPriority,
                                                    progress: nil)
-                                    { [weak self] image, _, _, _, _, _ in
-                                        guard let self else { return }
-                                        if let image {
-                                            bannerImageView.image = image
-                                            bannerImageIconView.isHidden = true
+                                        { [weak self] image, _, _, _, _, _ in
+                                            guard let self else { return }
+                                            if let image {
+                                                bannerImageView.image = image
+                                                bannerImageIconView.isHidden = true
+                                            }
                                         }
-                                    }
                                 }
                             }
                             let colorStr = json["tintColor"] as? String

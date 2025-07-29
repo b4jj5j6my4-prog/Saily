@@ -41,17 +41,17 @@ class DepictionTabControl: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public func textWidth() -> CGFloat {
+    func textWidth() -> CGFloat {
         text.size(withAttributes: [.font: tabLabel.font as Any]).width
     }
 
-    @objc public func viewTapped(_: Any) {
+    @objc func viewTapped(_: Any) {
         if let tabView = superview?.superview as? DepictionTabControlContainer {
             tabView.tabTapped(self)
         }
     }
 
-    public var highlighted: Bool = false {
+    var highlighted: Bool = false {
         didSet {
             if highlighted {
                 tabLabel.textColor = tintColor

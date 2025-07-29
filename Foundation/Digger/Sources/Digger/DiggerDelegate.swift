@@ -151,7 +151,6 @@ extension DiggerDelegate {
             diggerLog(error)
 
         case let .success(url):
-
             DiggerCache.moveItem(atPath: diggerSeed.tempPath, toPath: diggerSeed.cachePath)
 
             diggerLog("download success \n" + url.absoluteString)

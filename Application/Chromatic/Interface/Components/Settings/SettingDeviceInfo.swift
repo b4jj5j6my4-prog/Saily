@@ -96,7 +96,6 @@ extension SettingView {
             if ret.count < 1 { ret = "_" }
             return ret
         } withAction: { _, _ in
-
             let alert = UIAlertController(title: NSLocalizedString("USER_AGENT", comment: "User Agent"),
                                           message: "",
                                           preferredStyle: .alert)

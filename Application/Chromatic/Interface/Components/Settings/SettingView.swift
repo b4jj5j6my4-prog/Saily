@@ -14,7 +14,7 @@ import SnapKit
 import UIKit
 
 class SettingView: UIScrollView {
-    public let shortPadding: Bool
+    let shortPadding: Bool
 
     private let safeAnchor = UIView()
     private let frameBuilder = UIView()

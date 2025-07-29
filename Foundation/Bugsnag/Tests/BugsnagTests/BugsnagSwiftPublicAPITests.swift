@@ -48,7 +48,7 @@ class BugsnagSwiftPublicAPITests: XCTestCase {
         Bugsnag.start(withApiKey: apiKey)
         Bugsnag.start(with: BugsnagConfiguration(apiKey))
 
-        let _ = Bugsnag.lastRunInfo?.crashed
+        _ = Bugsnag.lastRunInfo?.crashed
 
         Bugsnag.notify(ex)
         Bugsnag.notify(ex) { _ -> Bool in false }
@@ -64,10 +64,10 @@ class BugsnagSwiftPublicAPITests: XCTestCase {
         Bugsnag.resumeSession()
 
         Bugsnag.setContext("ctx")
-        let _ = Bugsnag.context()
+        _ = Bugsnag.context()
 
         Bugsnag.setUser("me", withEmail: "memail@foo.com", andName: "you")
-        let _ = Bugsnag.user()
+        _ = Bugsnag.user()
 
         let onSession = Bugsnag.addOnSession(block: sessionBlock)
         Bugsnag.addOnSession { (_: BugsnagSession) -> Bool in
@@ -270,10 +270,10 @@ class BugsnagSwiftPublicAPITests: XCTestCase {
         client.context = ""
         _ = client.context
 
-        let _ = client.lastRunInfo?.crashed
+        _ = client.lastRunInfo?.crashed
 
         client.setUser("me", withEmail: "memail@foo.com", andName: "you")
-        let _ = client.user()
+        _ = client.user()
 
         let onSession = client.addOnSession(block: sessionBlock)
         client.addOnSession { (_: BugsnagSession) -> Bool in

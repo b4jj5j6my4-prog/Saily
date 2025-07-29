@@ -421,7 +421,6 @@ open class DTPhotoViewerController: UIViewController {
         if let gestureView = gesture.view {
             switch gesture.state {
             case .began:
-
                 // Delegate method
                 delegate?.photoViewerController?(self, willBeginPanGestureRecognizer: panGestureRecognizer)
 

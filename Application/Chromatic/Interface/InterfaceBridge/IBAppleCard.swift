@@ -31,7 +31,6 @@ private struct CardOptions {
 
 private let allCardOptions: [CardOptions] = [
     .init(text: NSLocalizedString("SET_GRAVATAR", comment: "Set Gravatar"), block: { controller in
-
         let alert = UIAlertController(title: NSLocalizedString("SET_GRAVATAR", comment: "Set Gravatar"),
                                       message: NSLocalizedString("INPUT_YOUR_EMAIL_FOR_GRAVATAR", comment: "Input your email for gravatar"),
                                       preferredStyle: .alert)

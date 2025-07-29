@@ -155,8 +155,7 @@ private class SearchBarButton: UIView {
         coverButton.addTarget(self, action: #selector(touched), for: .touchUpInside)
     }
 
-    @objc private
-    func touched() {
+    @objc private func touched() {
         puddingAnimate()
         onTouch?()
     }

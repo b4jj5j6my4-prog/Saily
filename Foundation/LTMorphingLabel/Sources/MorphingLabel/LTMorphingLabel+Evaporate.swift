@@ -39,7 +39,6 @@ extension LTMorphingLabel {
 
         effectClosures["Evaporate\(LTMorphingPhases.disappear)"] = {
             char, index, progress in
-
             let newProgress = LTEasing.easeOutQuint(progress, 0.0, 1.0, 1.0)
             let yOffset: CGFloat = -0.8 * CGFloat(self.font.pointSize) * CGFloat(newProgress)
             let currentRect = self.previousRects[index].offsetBy(dx: 0, dy: yOffset)
@@ -56,7 +55,6 @@ extension LTMorphingLabel {
 
         effectClosures["Evaporate\(LTMorphingPhases.appear)"] = {
             char, index, progress in
-
             let newProgress = 1.0 - LTEasing.easeOutQuint(progress, 0.0, 1.0)
             let yOffset = CGFloat(self.font.pointSize) * CGFloat(newProgress) * 1.2
 

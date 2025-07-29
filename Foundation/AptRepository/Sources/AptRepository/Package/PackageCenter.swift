@@ -169,8 +169,8 @@ public final class PackageCenter {
 
         let jbrootPath = Bundle.main.bundlePath.components(separatedBy: "/Applications/")[0].trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         let isRoothide = true
-        
-        if isRoothide && !jbrootPath.isEmpty {
+
+        if isRoothide, !jbrootPath.isEmpty {
             let statusPath = "/\(jbrootPath)/Library/dpkg/status"
             systemPackageStatusLocation = statusPath
             Dog.shared.join("RepositoryCenter", "detected roothide environment, prefix: \(jbrootPath)")

@@ -82,7 +82,7 @@ struct MorphingText_Previews: PreviewProvider {
             "$10000.00",
         ]
 
-        public var body: some View {
+        var body: some View {
             VStack {
                 Spacer()
                 Text("LTMorphingLabel").font(.largeTitle)

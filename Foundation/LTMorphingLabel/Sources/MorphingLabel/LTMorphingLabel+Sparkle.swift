@@ -73,7 +73,6 @@ extension LTMorphingLabel {
 
         progressClosures["Sparkle\(LTMorphingPhases.progress)"] = {
             (index: Int, progress: Float, isNewChar: Bool) in
-
             if !isNewChar {
                 return min(1.0, max(0.0, progress))
             }
@@ -90,7 +89,6 @@ extension LTMorphingLabel {
 
         effectClosures["Sparkle\(LTMorphingPhases.disappear)"] = {
             char, index, progress in
-
             LTCharacterLimbo(
                 char: char,
                 rect: self.previousRects[index],
@@ -102,7 +100,6 @@ extension LTMorphingLabel {
 
         effectClosures["Sparkle\(LTMorphingPhases.appear)"] = {
             char, index, progress in
-
             if char != " " {
                 let rect = self.newRects[index]
                 let emitterPosition = CGPoint(
@@ -143,7 +140,6 @@ extension LTMorphingLabel {
 
         drawingClosures["Sparkle\(LTMorphingPhases.draw)"] = {
             (charLimbo: LTCharacterLimbo) in
-
             if charLimbo.drawingProgress > 0.0 {
                 let (charImage, rect) = self.maskedImageForCharLimbo(
                     charLimbo,

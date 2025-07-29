@@ -113,8 +113,7 @@ public struct Package: Codable, Hashable, Identifiable {
 
     // MARK: - Static Tools
 
-    public static
-    func validateVersion(_ str: String) -> Bool {
+    public static func validateVersion(_ str: String) -> Bool {
         AptPackageVersion.isVersionVaild(str)
     }
 
@@ -125,8 +124,7 @@ public struct Package: Codable, Hashable, Identifiable {
         case invalidParameter
     }
 
-    public static
-    func compareVersion(_ a: String, b: String) -> VersionCompareResult {
+    public static func compareVersion(_ a: String, b: String) -> VersionCompareResult {
         if !Package.validateVersion(a) {
             return .invalidParameter
         }
@@ -139,13 +137,11 @@ public struct Package: Codable, Hashable, Identifiable {
         return .aIsEqualToB
     }
 
-    public
-    func propertyListEncoded() -> Data? {
+    public func propertyListEncoded() -> Data? {
         try? PropertyListEncoder().encode(self)
     }
 
-    public static
-    func propertyListDecoded(with data: Data?) -> Self? {
+    public static func propertyListDecoded(with data: Data?) -> Self? {
         guard let data else {
             return nil
         }

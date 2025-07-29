@@ -56,8 +56,7 @@ extension TaskManager {
     ///   - context: the copy of user actions, will be modified when processing to avoid dependency loop
     ///   - dryRun: do not commit to task manager if set true
     /// - Returns: resolution result
-    @discardableResult private
-    func resolvePackageActions(context: [PackageAction], dryRun: Bool) -> PackageResolutionResult {
+    @discardableResult private func resolvePackageActions(context: [PackageAction], dryRun: Bool) -> PackageResolutionResult {
         var resolvedActions = [PackageAction]()
         PackageActionReport.shared.openSession()
         defer {
