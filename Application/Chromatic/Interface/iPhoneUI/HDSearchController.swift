@@ -15,7 +15,7 @@ class HDSearchNavigator: UINavigationController {
         navigationBar.prefersLargeTitles = true
 
         tabBarItem = UITabBarItem(title: NSLocalizedString("SEARCH", comment: "Search"),
-                                  image: UIImage.fluent(.bookSearch24Regular),
+                                  image: UIImage.fluent(.search24Filled),
                                   tag: 0)
     }
 
