@@ -16,7 +16,7 @@ class HDInstalledNavigator: UINavigationController {
         navigationBar.prefersLargeTitles = true
 
         tabBarItem = UITabBarItem(title: NSLocalizedString("INSTALLED", comment: "Installed"),
-                                  image: UIImage.fluent(.textChangeAccept24Filled),
+                                  image: UIImage.fluent(.collections24Filled),
                                   tag: 0)
         tabBarItem.badgeColor = .systemBlue
 
