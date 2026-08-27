@@ -19,7 +19,7 @@ class HDMainNavigator: UINavigationController {
         navigationBar.prefersLargeTitles = true
 
         tabBarItem = UITabBarItem(title: NSLocalizedString("MAIN", comment: "Main"),
-                                  image: UIImage.fluent(.timeline24Regular),
+                                  image: UIImage.fluent(.star24Regular),
                                   tag: 0)
     }
 
