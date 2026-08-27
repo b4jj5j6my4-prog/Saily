@@ -19,7 +19,7 @@ class HDRepoNavigator: UINavigationController {
         navigationBar.prefersLargeTitles = true
 
         tabBarItem = UITabBarItem(title: NSLocalizedString("REPOSITORY", comment: "Repository"),
-                                  image: UIImage.fluent(.bookCompass24Regular),
+                                  image: UIImage.fluent(.bookGlobe24Regular),
                                   tag: 0)
 
         tabBarItem.badgeColor = .systemOrange
